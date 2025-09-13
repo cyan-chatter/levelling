@@ -1,8 +1,6 @@
 /* src/pages/HistoryPage.css */
 
-.history-container {
-    height: 100vh;
-    overflow-y: auto;
+.history-page {
     /* This makes the container scrollable */
     display: flex;
     flex-direction: column;

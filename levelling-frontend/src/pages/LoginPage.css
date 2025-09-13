@@ -1,0 +1,68 @@
+/* src/pages/LoginPage.css */
+.login-container {
+    display: flex;
+    height: 100vh;
+    color: var(--color-white);
+}
+
+.hero-section {
+    width: 60%;
+    background: url('/hero-bg.jpg') no-repeat center center/cover;
+    /* Add a cool background image to your /public folder */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 6rem;
+    color: var(--color-red);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.login-form-section {
+    width: 40%;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-section form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+}
+
+.login-form-section h2 {
+    text-align: center;
+    color: var(--color-white);
+}
+
+.login-form-section input {
+    background-color: var(--color-grey);
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.login-form-section button {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: var(--color-red);
+    text-align: center;
+}

@@ -83,7 +83,7 @@ const HistoryPage = () => {
     const sortedDates = Object.keys(history).sort((a, b) => new Date(b) - new Date(a));
 
     return (
-        <div className="history-container" ref={mainContainerRef}>
+        <div className="history-page" ref={mainContainerRef}>
             <header className="history-header">
                 {currentMonthYear}
             </header>

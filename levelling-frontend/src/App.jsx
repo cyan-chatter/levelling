@@ -4,10 +4,11 @@ import LoginPage from './pages/LoginPage';
 import HistoryPage from './pages/HistoryPage';
 import MainLayout from './components/MainLayout';
 import ProtectedRoute from './components/ProtectedRoute';
+import SagasPage from './pages/SagasPage';
+import TracksPage from './pages/TracksPage';
+import ObjectivesPage from './pages/ObjectivesPage'
 
 // Create placeholder pages for now
-const SagasPage = () => <div>Sagas Page</div>;
-const ObjectivesPage = () => <div>Objectives Page</div>;
 const MarketplacePage = () => <div>Marketplace Page</div>;
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       >
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/sagas" element={<SagasPage />} />
+        <Route path="/sagas/:sagaId/tracks" element={<TracksPage />} />
         <Route path="/objectives" element={<ObjectivesPage />} />
         <Route path="/marketplace" element={<MarketplacePage />} />
         {/* The default protected route redirects to history */}

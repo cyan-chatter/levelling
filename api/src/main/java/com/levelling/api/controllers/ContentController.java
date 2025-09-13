@@ -10,6 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import com.levelling.api.dto.TaskSelectionDto;
 
 @RestController
 @RequestMapping("/api/v1/content")
@@ -37,5 +38,15 @@ public class ContentController {
         String username = authentication.getName();
         List<Task> tasks = contentService.getTasksByArcId(arcId, username);
         return ResponseEntity.ok(tasks);
+    }
+
+    @GetMapping("/tasks/all-preset")
+    public ResponseEntity<List<TaskSelectionDto>> getAllPresetTasks() {
+        return ResponseEntity.ok(contentService.getAllPresetTasks());
+    }
+
+    @GetMapping("/arcs/all-preset")
+    public ResponseEntity<List<Arc>> getAllPresetArcs() {
+        return ResponseEntity.ok(contentService.getAllPresetArcs());
     }
 }

@@ -1,0 +1,105 @@
+/* src/components/ObjectiveSelectionModal.module.css */
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: var(--color-grey);
+    border-radius: 8px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemList {
+    flex: 1;
+    overflow-y: auto;
+    margin: 2rem 0;
+    padding-right: 1rem;
+    /* Space for scrollbar */
+}
+
+.item {
+    padding: 1rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+}
+
+.item p {
+    margin: 0;
+}
+
+.item:hover {
+    border-color: var(--color-yellow);
+}
+
+.item.selected {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+    font-weight: bold;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+}
+
+.saveButton,
+.cancelButton {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.saveButton {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.cancelButton {
+    background-color: #444;
+    color: var(--color-white);
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--color-black);
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+.itemName {
+    margin: 0;
+}
+
+.itemSubtext {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 4px;
+}

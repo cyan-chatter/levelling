@@ -7,6 +7,7 @@ import com.levelling.api.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import com.levelling.api.dto.UserProgressDto;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -30,6 +31,14 @@ public class UserService {
 
     @Autowired
     private ArcRepository arcRepository;
+
+    public UserProgressDto getUserProgress(String username) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+        UserProgress progress = userProgressRepository.findByUserId(user.getId())
+                .orElseGet(() -> new UserProgress(user.getId())); // Return new progress if none exists
+        return new UserProgressDto(progress);
+    }
 
     /**
      * Retrieves a list of all items owned by the user.

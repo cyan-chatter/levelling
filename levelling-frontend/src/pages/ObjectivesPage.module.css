@@ -1,0 +1,111 @@
+/* src/pages/ObjectivesPage.module.css */
+.objectivesPage {
+    padding: 2rem 4rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-grey);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.sectionHeader h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+.addButton {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.objectiveCard {
+    background-color: var(--color-grey);
+    border-left: 4px solid var(--color-red);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.itemName {
+    flex: 1;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.itemPoints {
+    font-weight: bold;
+    color: var(--color-yellow);
+}
+
+.itemType {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: var(--color-black);
+}
+
+.itemType.task {
+    background-color: var(--color-yellow);
+}
+
+.itemType.arc {
+    background-color: var(--color-green);
+}
+
+.statusMessage {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-grey);
+    border-left: 4px solid var(--color-yellow);
+    border-radius: 4px;
+}
+
+.objectiveCard.completed {
+    border-left-color: var(--color-green);
+    opacity: 0.6;
+}
+
+.objectiveCard.completed .itemName {
+    text-decoration: line-through;
+}
+
+.cardActions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.completeButton {
+    background-color: var(--color-green);
+    color: var(--color-black);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.completedCheck {
+    font-size: 1.5rem;
+}

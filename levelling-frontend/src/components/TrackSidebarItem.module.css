@@ -1,0 +1,25 @@
+/* src/components/TrackSidebarItem.module.css */
+.sidebarItem {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-grey);
+    transition: background-color 0.2s ease;
+}
+
+.sidebarItem:hover {
+    background-color: var(--color-grey);
+}
+
+.sidebarItem.active {
+    background-color: var(--color-red);
+    font-weight: bold;
+}
+
+.sidebarIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+    border-radius: 4px;
+}

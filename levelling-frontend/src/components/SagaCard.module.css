@@ -1,0 +1,40 @@
+.sagaCard {
+    background-color: var(--color-grey);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.sagaCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.sagaCardImage {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.sagaCardContent {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sagaCardTitle {
+    margin: 0 0 0.5rem 0;
+    color: var(--color-red);
+}
+
+.sagaCardDescription {
+    margin: 0;
+    flex: 1;
+}
+

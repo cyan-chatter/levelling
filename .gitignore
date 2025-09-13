@@ -1,0 +1,77 @@
+# =============================================================================
+# GENERAL / OS / LOGS
+# =============================================================================
+# Logs and temporary files
+*.log
+*.tmp
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =============================================================================
+# IDE CONFIGURATION
+# =============================================================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# =============================================================================
+# JAVA / MAVEN BACKEND (Assuming folder is named 'api')
+# =============================================================================
+# Maven build output directory
+api/target/
+
+# Maven-related files (if any are generated outside target)
+api/pom.xml.tag
+api/pom.xml.releaseBackup
+api/pom.xml.versionsBackup
+api/pom.xml.next
+api/release.properties
+api/dependency-reduced-pom.xml
+
+# Compiled class files (if they appear outside target for some reason)
+api/**/*.class
+
+# Secrets - It's good practice to ignore local or dev-specific properties.
+# Keep application.properties if it contains non-secret config.
+# Ignore specific profiles like application-local.properties or application-dev.properties
+api/src/main/resources/application-local.properties
+api/src/main/resources/application-dev.properties
+
+# =============================================================================
+# NODE / REACT FRONTEND (Assuming folder is named 'levelling-frontend')
+# =============================================================================
+# Dependencies
+levelling-frontend/node_modules/
+
+# Build output directory
+levelling-frontend/dist/
+levelling-frontend/build/
+
+# Environment variables
+# Ignore all .env files, but DO NOT ignore template/example files
+levelling-frontend/.env*
+!levelling-frontend/.env.example
+!levelling-frontend/.env.development
+!levelling-frontend/.env.production
+
+# Test reports
+levelling-frontend/coverage/
+
+# Vite-specific cache
+levelling-frontend/.vite/

@@ -2,18 +2,35 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import './MainLayout.css'; // We'll create this
+import './MainLayout.css';
 
 const TopBar = () => {
     const { user, logout } = useAuth();
-    // In a real app, you'd fetch currencies and display them here
+    const currencies = user?.currencies;
+
     return (
         <div className="top-bar">
             <div className="currency-meters">
-                <span>Points: {user?.currencies?.points ?? 0}</span>
-                <span>💎: {user?.currencies?.yellowGems ?? 0}</span>
+                <span title="Points">
+                    {currencies?.points?.toLocaleString() ?? 0} 🪙
+                </span>
+                <span title="Happiness Gems (Daily)">
+                    🟡 {currencies?.yellowGems ?? 0}
+                </span>
+                <span title="Effort Gems (Daily)">
+                    🔵 {currencies?.royalBlueGems ?? 0}
+                </span>
+                <span title="Regularity Gems (Weekly)">
+                    🔴 {currencies?.crimsonRedGems ?? 0}
+                </span>
+                <span title="Skill Gems (Monthly)">
+                    🟢 {currencies?.emeraldGreenGems ?? 0}
+                </span>
             </div>
-            <button onClick={logout}>Logout</button>
+            {/* We add a class name for styling */}
+            <button className="logout-button" onClick={logout}>
+                Logout
+            </button>
         </div>
     );
 };
@@ -36,7 +53,6 @@ const MainLayout = () => {
             <div className="content-container">
                 <TopBar />
                 <main className="page-content">
-                    {/* This is where the routed page component will be rendered */}
                     <Outlet />
                 </main>
             </div>

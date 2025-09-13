@@ -9,11 +9,15 @@ import java.util.stream.Collectors;
 @Data
 public class UserProgressDto {
     private Set<String> completedTaskIds;
-    // We can add completedArcIds here later if needed
+    private Set<String> completedArcIds;
 
     public UserProgressDto(UserProgress progress) {
         this.completedTaskIds = progress.getCompletedTasks().stream()
                 .map(UserProgress.CompletedTask::getTaskId)
+                .collect(Collectors.toSet());
+
+        this.completedArcIds = progress.getCompletedArcs().stream() // <-- ADD THIS BLOCK
+                .map(UserProgress.CompletedArc::getArcId)
                 .collect(Collectors.toSet());
     }
 }
